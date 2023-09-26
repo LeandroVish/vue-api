@@ -8,11 +8,10 @@ const TVGenres = ref([])
 onMounted(async () => {
   let response = await api.get('genre/movie/list?language=pt-BR')
   moviesGenres.value = response.data.genres
-  response =  await api.get('genre/tv/list?language=pt-BR')
+  response = await api.get('genre/tv/list?language=pt-BR')
   TVGenres.value = response.data.genres
 })
 </script>
-
 <template>
   <header>
     <nav>
@@ -25,7 +24,6 @@ onMounted(async () => {
     <router-view />
   </main>
 </template>
-
 <style scoped>
 header {
   height: 3rem;
